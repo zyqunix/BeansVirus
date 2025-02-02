@@ -13,7 +13,7 @@ class Program {
 
         bool hasAlpha = beans.Channels() == 4;
 
-        string cascadeFile = @"C:\Users\Fabio\source\repos\BeansVirus\BeansVirus\haarcascade_frontalface_default.xml";
+        string cascadeFile = @"C:\Users\Fabio\source\repos\BeansVirus\BeansVirus\haarcascade_frontalface_default.xml"; // xml haarcascade detection file is needed too
         var faceCascade = new CascadeClassifier(cascadeFile);
 
         Mat gray = new Mat();
@@ -63,8 +63,8 @@ class Program {
 
     static void Main(string[] args) {
         string userName = Environment.UserName;
-        string directoryPath = $"C:\\Users\\{userName}\\OneDrive\\Documents\\SavedPictures";
-        string beansPath = @"C:\Users\Fabio\source\repos\BeansVirus\BeansVirus\beans.png";
+        string directoryPath = $@"C:\Users\{userName}\Downloads";
+        string beansPath = @"C:\Users\Fabio\source\repos\BeansVirus\BeansVirus\beans.png"; // beans.png is needed
 
         processImages(directoryPath, beansPath);
     }
